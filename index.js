@@ -4,6 +4,8 @@ const client = new Discord.Client()
 
 //Si está activo, responde 
 client.on('ready', ( ) => {
+    client.user.setActivity('Online', {type: 'WATCHING'});
+    console.log('Ready');
     //variable que guarda el id del canal
     var generalChannel = client.channels.cache.get("870664397301891096")
     //envia un mensaje a ese canal
